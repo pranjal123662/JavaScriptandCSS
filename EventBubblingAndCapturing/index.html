@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling and Capturing</title>
+</head>
+<style>
+    #grandparent { background-color: lightcoral; }
+#parent { background-color: lightblue; }
+#child { background-color: lightgreen; }
+    div{
+        min-width:200px;
+        max-height:200px;
+        padding:50px;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <div id="grandparent">
+        <div id="parent">
+            <div id="child"></div>
+        </div>
+    </div>
+    <script src="./Practice.js">
+
+    </script>
+</body>
+</html>

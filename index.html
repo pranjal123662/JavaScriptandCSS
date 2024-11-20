@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Didact example</title>
+</head>
+<body>
+    <div class="jaunpur">
+        <ul>
+            <li class="fgf" id="text1">God</li>
+            <li class="fgf" id="text2">Please</li>
+        </ul>
+    </div>
+</body>
+<style>
+    .bca{background-color: red;}
+</style>
+<script>
+    const parent=document.querySelector('.jaunpur');
+    const newlyli=document.createElement("h1");
+    newlyli.setAttribute("class","bca")
+    newlyli.setAttribute("id","mariahu")
+    let text=document.createTextNode("Animal")
+    newlyli.appendChild(text)
+    parent.appendChild(newlyli)
+    newli("pranjal");
+    newli("himanshu");
+    changeAttribute({value:"ul",targetedValue:"li"})
+    function changeAttribute(element){
+        const parent=document.querySelectorAll(element.value)
+        console.log(parent)
+        const elemAttribute=parent.children.getAttribute(element.targetedValue)
+        console.log(elemAttribute) 
+    }
+    function newli(element){
+        let newli=document.createElement('li');
+        let text=document.createTextNode(element)
+        newli.appendChild(text)
+        let grandparent=document.querySelector('div');
+        let liparent=grandparent?grandparent.children:"";
+        for(let i=0;i<liparent.length;i++){
+            liparent[i].localName=="ul"?liparent[i].appendChild(newli):"";
+        }
+    }
+</script>
